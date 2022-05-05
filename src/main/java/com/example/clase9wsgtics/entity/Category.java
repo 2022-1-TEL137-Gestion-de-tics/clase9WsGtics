@@ -1,5 +1,6 @@
 package com.example.clase9wsgtics.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Table(name = "categories")
 @Getter
 @Setter
+@JsonIgnoreProperties({"picture"})
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
