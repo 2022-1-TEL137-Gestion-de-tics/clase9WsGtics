@@ -21,11 +21,11 @@ public class Product {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SupplierID")
-    private Supplier supplierID;
+    private Supplier supplier;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CategoryID")
-    private Category categoryID;
+    private Category category;
 
     @Column(name = "QuantityPerUnit", length = 20)
     private String quantityPerUnit;
